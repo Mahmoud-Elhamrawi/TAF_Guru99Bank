@@ -16,7 +16,7 @@ public class testBase {
     @BeforeClass
     public void step()
     {
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         driver.get("https://www.demo.guru99.com/V4/index.php");
 
         driver.manage().window().maximize();
