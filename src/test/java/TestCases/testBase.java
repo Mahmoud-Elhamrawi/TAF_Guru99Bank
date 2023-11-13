@@ -7,13 +7,14 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class testBase {
     protected WebDriver driver ;
-    @BeforeClass
+    @BeforeMethod
     public void step()
     {
         driver = new ChromeDriver();
@@ -40,7 +41,7 @@ public class testBase {
 
 
 
-    @AfterClass
+    @AfterMethod
     public void cleanUp() throws InterruptedException {
         Thread.sleep(3000);
         driver.quit();
